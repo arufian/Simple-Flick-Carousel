@@ -1,0 +1,71 @@
+	#galleryContainer{
+		position: relative;
+    	overflow: hidden;
+	}
+	.directionalButton{
+		position: relative;float:left;width: 45px;height: 70px;cursor:pointer;
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#110503), color-stop(50%,#5B6871), color-stop(51%,#110503), color-stop(100%,#5B6871));
+		-webkit-box-shadow: inset 0 0 28px rgba(126,179,170, 177.25);border-radius: 16px;border-color: gray;border-style: solid;border-width: 2px;
+	}
+	.leftdirection{
+		background: url('img/img.png') no-repeat -3px -3px; background-size: 91px 32px;
+		width: 26px;
+		height: 26px;vertical-align: middle;
+		position: absolute;margin: auto;top: 0;   bottom: 0;   left: 0;   right: 0;
+	}
+	.rightdirection{
+		background: url('img/img.png')  no-repeat -39px -3px;	background-size: 91px 32px;
+		width: 26px;
+		height: 26px;vertical-align: middle;
+		position: absolute;margin: auto;top: 0;   bottom: 0;   left: 0;   right: 0;
+	}
+	.carousel{
+		position: relative;
+	    overflow: hidden;
+	    width: 228px;
+		height: 68px;
+	    margin: 0px;
+	    padding: 0px;
+	    float: left;
+	}
+	.overview{
+		list-style: none;width: 1140px;padding: 0px;
+		position: absolute;top: 8px;margin: 0px;left:0px;
+	}
+	.overview li{
+		position: relative;float: left;width: 228px;
+	}
+	.overview img{
+		width: 228px;
+	}
+	.paging{
+		margin: 10px 0 0 50px;
+	}
+	.pageNumber{
+		display: table;position: relative;float: left; cursor:pointer;
+		width: 25px;height: 25px;
+		background-color:rgb(141,157,155);
+		-webkit-border-radius: 8px; margin-right: 25px;font-size: 12px;font-weight:bold;
+	}
+	.pageNumber:hover{
+		-webkit-box-shadow:0 0 20px #ffffff;
+	}
+	.pageNumber p{
+		text-align: center;vertical-align: middle;display: 
+		table-cell;color:white;text-shadow:2px 2px #000000;
+	}
+	#selectedPage{
+		display: table;position: relative;float: left;width: 25px;height: 25px;
+		background-color:rgb(212,227,225);
+		-webkit-border-radius: 8px; margin-right: 25px;font-size: 12px;font-weight:bold;
+	}
+	#selectedPage p{
+		color:black;text-shadow:2px 2px #FFFFFF;
+	}
+	.insetBtn {
+		position: absolute; z-index:10;
+		background: url('img/img.png') no-repeat -72px -1px;
+		width: 18px;
+		height: 18px;top: 45px;left: 205px;
+		background-size: 91px 32px;
+	}

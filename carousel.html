@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, user-scalable=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="cache-control" content="no-cache">
+<meta http-equiv="expires" content="0">
+<meta http-equiv="pragma" content="no-cache">
+<title>DeNA Carousel</title>
+<!-- iPhone home screen -->
+<link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png"/>
+<link rel="apple-touch-startup-image" href="images/startup.png"/>
+<script type="text/javascript" src="DeNACarousel.js"></script> 
+<link href="style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+window.onload = function (){
+	var leftBtn1 = document.getElementById('leftBtn1');
+	var rightBtn1 = document.getElementById('rightBtn1');
+	var leftBtn2 = document.getElementById('leftBtn2');
+	var rightBtn2 = document.getElementById('rightBtn2');
+	
+	var scroll1 = new DeNACarousel(document.getElementById('carouselImages1'), document.getElementById('paging1'));
+	scroll1.automaticScrolling("right", 3);
+	leftBtn1.addEventListener('click', function(event){
+		event.preventDefault();
+		event.cancelBubble = true;
+		event.stopPropagation();
+		scroll1.scrollLeft();
+	}, false);
+	rightBtn1.addEventListener('click', function(event){
+		event.preventDefault();
+		event.cancelBubble = true;
+		event.stopPropagation();
+		scroll1.scrollRight();
+	}, false);
+	
+	
+	var scrollCallback = function(){
+		if(!scroll2.isHasLeft()){
+			leftBtn2.style['opacity'] = 0.5;
+		} else {
+			leftBtn2.style['opacity'] = 1;
+		}
+		if(!scroll2.isHasRight()){
+			rightBtn2.style['opacity'] = 0.5;
+		} else {
+			rightBtn2.style['opacity'] = 1;
+		}
+	}
+	var scroll2 = new DeNACarousel(document.getElementById('carouselImages2'), document.getElementById('paging2'), scrollCallback);
+	leftBtn2.addEventListener('click', function(event){
+		event.preventDefault();
+		event.cancelBubble = true;
+		event.stopPropagation();
+		scroll2.scrollLeft();
+	}, false);
+	rightBtn2.addEventListener('click', function(event){
+		event.preventDefault();
+		event.cancelBubble = true;
+		event.stopPropagation();
+		scroll2.scrollRight();
+	}, false);
+};
+</script>
+</head>
+<body style="background-color:#000000;padding: 0;margin: 5px 0 0 0;">
+<div style="color:#FFFFFF">Auto</div>
+	<div id="galleryContainer">
+		<div class="directionalButton" id="leftBtn1">
+			<div class="leftdirection"></div>
+		</div>
+		<div id="carouselImages1" class="carousel">
+				<ul class="overview">
+				<li><a href="http://dena.jp/intl/"><img src="img/banner01.png"></a></li>
+				<li><a href="http://mobage.com/"><img src="img/banner02.png"></a></li>
+				<li><a href="http://www.mbga.jp"><img src="img/banner03.png"></a></li>
+				<li><a href="http://mobage.cn/"><img src="img/banner04.png"></a></li>
+				<li><a href="http://www.dena.jp/"><img src="img/banner05.png"></a></li>
+				</ul>
+				<div class="insetBtn"></div>
+		</div>
+		<div class="directionalButton" id="rightBtn1">
+			<div class="rightdirection"></div>
+		</div>
+	</div>
+	<div class="paging" style="padding: 0px;" id="paging1">
+			<div id="selectedPage" class="pageNumber">
+				<p style="">1</p>
+			</div>
+			<div class="pageNumber">
+				<p>2</p>
+			</div>
+			<div class="pageNumber">
+				<p>3</p>
+			</div>
+			<div class="pageNumber">
+				<p>4</p>
+			</div>
+			<div class="pageNumber">
+				<p>5</p>
+			</div>
+	</div>
+	
+<br/>
+<br/>
+<hr>	
+<br/>
+<br/>
+<div style="color:#FFFFFF">Not Auto</div>
+	<div id="galleryContainer">
+		<div class="directionalButton" id="leftBtn2">
+			<div class="leftdirection"></div>
+		</div>
+		<div id="carouselImages2" class="carousel">
+				<ul class="overview">
+				<li><a href="http://dena.jp/intl/"><img src="img/banner01.png"></a></li>
+				<li><a href="http://mobage.com/"><img src="img/banner02.png"></a></li>
+				<li><a href="http://www.mbga.jp"><img src="img/banner03.png"></a></li>
+				<li><a href="http://mobage.cn/"><img src="img/banner04.png"></a></li>
+				<li><a href="http://www.dena.jp/"><img src="img/banner05.png"></a></li>
+				</ul>
+				<div class="insetBtn"></div>
+		</div>
+		<div class="directionalButton" id="rightBtn2">
+			<div class="rightdirection"></div>
+		</div>
+	</div>
+	<div class="paging" style="padding: 0px;" id="paging2">
+			<div id="selectedPage" class="pageNumber">
+				<p style="">1</p>
+			</div>
+			<div class="pageNumber">
+				<p>2</p>
+			</div>
+			<div class="pageNumber">
+				<p>3</p>
+			</div>
+			<div class="pageNumber">
+				<p>4</p>
+			</div>
+			<div class="pageNumber">
+				<p>5</p>
+			</div>
+	</div>
+</body>
+</html>
