@@ -1,7 +1,7 @@
 const LEFT_DIRECTION = "left";
 const RIGHT_DIRECTION = "right";
 (function(){
-	function DeNACarousel(element, pageNumElement, callback){
+	function SFCarousel(element, pageNumElement, callback){
 		var self =  this;
 		self.element = element;
 		self.scrollCallback = callback;
@@ -21,7 +21,7 @@ const RIGHT_DIRECTION = "right";
 		}
 	}
 	
-	DeNACarousel.prototype = {
+	SFCarousel.prototype = {
 		automaticScrolling : function(directions,seconds){
 			var self = this;
 			self.isUseAuto = true;
@@ -183,5 +183,5 @@ const RIGHT_DIRECTION = "right";
 			}
 		}
 	}
-	window.DeNACarousel = DeNACarousel;
+	window.SFCarousel = SFCarousel;
 })();
