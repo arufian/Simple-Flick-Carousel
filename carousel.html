@@ -13,7 +13,7 @@
 <!-- iPhone home screen -->
 <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png"/>
 <link rel="apple-touch-startup-image" href="images/startup.png"/>
-<script type="text/javascript" src="DeNACarousel.js"></script> 
+<script type="text/javascript" src="flickcarousel.js"></script> 
 <link href="style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript">
 window.onload = function (){
@@ -22,7 +22,7 @@ window.onload = function (){
 	var leftBtn2 = document.getElementById('leftBtn2');
 	var rightBtn2 = document.getElementById('rightBtn2');
 	
-	var scroll1 = new DeNACarousel(document.getElementById('carouselImages1'), document.getElementById('paging1'));
+	var scroll1 = new SFCarousel(document.getElementById('carouselImages1'), document.getElementById('paging1'));
 	scroll1.automaticScrolling("right", 3);
 	leftBtn1.addEventListener('click', function(event){
 		event.preventDefault();
@@ -50,7 +50,7 @@ window.onload = function (){
 			rightBtn2.style['opacity'] = 1;
 		}
 	}
-	var scroll2 = new DeNACarousel(document.getElementById('carouselImages2'), document.getElementById('paging2'), scrollCallback);
+	var scroll2 = new SFCarousel(document.getElementById('carouselImages2'), document.getElementById('paging2'), scrollCallback);
 	leftBtn2.addEventListener('click', function(event){
 		event.preventDefault();
 		event.cancelBubble = true;
